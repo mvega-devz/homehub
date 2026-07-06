@@ -4,7 +4,10 @@
   "private": true,
   "description": "HomeHub monorepo foundation.",
   "scripts": {
+    "build": "npm run build --workspace @homehub/web",
+    "dev:web": "npm run dev --workspace @homehub/web",
     "lint": "echo \"No linting configured yet\"",
+    "preview:web": "npm run preview --workspace @homehub/web",
     "test": "echo \"No tests configured yet\""
   },
   "workspaces": [
@@ -17,4 +20,3 @@
   },
   "license": "MIT"
 }
-
