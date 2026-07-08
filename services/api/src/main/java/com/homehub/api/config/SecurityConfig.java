@@ -17,7 +17,9 @@ public class SecurityConfig {
         .csrf(AbstractHttpConfigurer::disable)
         .formLogin(AbstractHttpConfigurer::disable)
         .httpBasic(AbstractHttpConfigurer::disable)
-        .authorizeHttpRequests(requests -> requests.anyRequest().denyAll())
+        .authorizeHttpRequests(requests -> requests
+            .requestMatchers("/api/profile").permitAll()
+            .anyRequest().denyAll())
         .build();
   }
 

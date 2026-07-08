@@ -28,13 +28,23 @@ homehub/
 
 ## Current Scope
 
-This repository currently contains the HH-16 monorepo foundation only.
+This repository contains the HomeHub monorepo foundation, React web app, and
+Spring Boot API service.
 
-It does not include generated React or Spring Boot applications yet. Those applications are intended to be created in their dedicated follow-up stories.
+The API currently exposes an MVP profile endpoint for retrieving and updating
+the current user profile. See [docs/api/profile.md](docs/api/profile.md).
 
 ## Getting Started
 
-There are no application services to install or run yet.
+Install workspace dependencies:
 
-Future stories will add workspace scripts, application setup, Docker services, and CI workflows.
+```bash
+npm install
+```
 
+Run the API:
+
+```bash
+cd services/api
+./mvnw spring-boot:run
+```
