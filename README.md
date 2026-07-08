@@ -48,3 +48,19 @@ Run the API:
 cd services/api
 ./mvnw spring-boot:run
 ```
+
+Run PostgreSQL locally:
+
+```bash
+docker compose up -d postgres
+```
+
+Run the API against PostgreSQL:
+
+```bash
+cd services/api
+SPRING_PROFILES_ACTIVE=postgres ./mvnw spring-boot:run
+```
+
+See [docs/database/postgresql.md](docs/database/postgresql.md) for PostgreSQL
+environment variables and persistence details.
