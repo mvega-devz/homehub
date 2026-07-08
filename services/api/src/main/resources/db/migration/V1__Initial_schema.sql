@@ -1,0 +1,2 @@
+-- Initial HomeHub schema migration.
+-- Business tables are intentionally deferred to their owning stories.
