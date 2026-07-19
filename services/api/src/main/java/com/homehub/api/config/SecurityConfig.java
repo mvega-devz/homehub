@@ -18,7 +18,7 @@ public class SecurityConfig {
         .formLogin(AbstractHttpConfigurer::disable)
         .httpBasic(AbstractHttpConfigurer::disable)
         .authorizeHttpRequests(requests -> requests
-            .requestMatchers("/api/profile").permitAll()
+            .requestMatchers("/api/profile", "/api/maintenance", "/api/maintenance/**").permitAll()
             .anyRequest().denyAll())
         .build();
   }
