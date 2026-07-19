@@ -1,0 +1,7 @@
+CREATE TABLE maintenance_task (
+  id BIGSERIAL PRIMARY KEY,
+  title VARCHAR(255) NOT NULL,
+  due_date DATE NOT NULL,
+  frequency VARCHAR(100) NOT NULL,
+  completed BOOLEAN NOT NULL DEFAULT FALSE
+);
